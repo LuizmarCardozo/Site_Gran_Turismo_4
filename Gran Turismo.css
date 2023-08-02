@@ -99,17 +99,23 @@ img {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
+.Tcarsg {
+  font-family: "Americorps";
+  position: absolute;
+  bottom: 45px;
+  right: 45%;
+}
+
 .Tcarsj {
   font-family: "Americorps";
   position: absolute;
-  text-align: center;
-  bottom: 80px;
-  right: 64%;
+  bottom: 45px;
+  left: 20%;
 }
 
-.TcarsG {
+.TcarsA {
   font-family: "Americorps";
   position: absolute;
-  bottom: 95px;
-  right: 100%;
+  bottom: 45px;
+  right: 27%;
 }
