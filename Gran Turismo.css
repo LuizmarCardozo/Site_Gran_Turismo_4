@@ -48,7 +48,7 @@ img {
 }
 
 .supra {
-  transform: scale(1);
+  transform: scale(0.5);
   position: absolute;
   top: 50%;
   left: 20%;
