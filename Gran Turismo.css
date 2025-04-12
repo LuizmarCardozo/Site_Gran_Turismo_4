@@ -1,33 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-h2,
-p {
-  position: relative;
-  z-index: 1;
-}
-
-#grad1 {
-  height: 100vh;
-  background-image: linear-gradient(
-    to right,
-    rgb(175, 175, 175),
-    rgb(91, 91, 91)
-  );
-}
-
-.mexirica {
-  transform: scale(0.8);
-  position: absolute;
-  top: -60px;
-  right: 38%;
-}
-
-@font-face {
-  font-family: "Americacorps";
-  src: url("americorps3d.ttf");
+  background-color: rgb(91, 91, 91); /* Fundo cinza em toda a página */
+  color: #fff; /* Texto branco para contraste */
+  font-family: "Americorps", Arial, sans-serif; /* Fonte personalizada + fallback */
 }
 
 @font-face {
@@ -35,87 +11,68 @@ p {
   src: url("americorps.ttf");
 }
 
-.Descricao {
-  color: rgb(0, 0, 0);
-  font-family: "Americorps";
-  position: absolute;
-  top: 140px;
-  right: 38%;
+@font-face {
+  font-family: "Americacorps";
+  src: url("americorps3d.ttf");
 }
 
-img {
+h1, h2 {
+  text-align: center; /* Centraliza os títulos */
+  margin-bottom: 20px;
+}
+
+header .Descricao {
+  margin: 20px;
+}
+
+.mexirica {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Quatro colunas na primeira linha */
+  gap: 20px; /* Espaçamento entre os itens */
+  width: 80%; /* Limita a largura da grade */
+}
+
+.grid-item {
+  background-color: rgb(75, 75, 75); /* Fundo mais escuro para os itens */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-family: "Americorps"; /* Usa a fonte personalizada */
+  transition: transform 0.3s ease-in-out; /* Transição suave para o efeito */
+}
+
+.grid-item:hover {
+  transform: scale(1.05); /* Zoom no bloco inteiro ao passar o mouse */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para destacar */
+}
+
+.grid-item img {
+  width: 250px; /* Largura fixa */
+  height: 200px; /* Altura fixa */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem deformar */
   border-radius: 8px;
 }
 
-.supra {
-  transform: scale(1);
-  position: absolute;
-  top: 50%;
-  left: 20%;
+.grid-container > .grid-item:nth-child(5) {
+  grid-column: span 4; /* Ocupa toda a largura da grade */
+  justify-self: center; /* Centraliza o item horizontalmente */
 }
 
-.bmw {
-  transform: scale(1);
-  position: absolute;
-  top: 50%;
-  left: 40%;
-}
-
-.gm {
-  transform: scale(1);
-  position: absolute;
-  top: 50%;
-  left: 60%;
-}
-
-.zoom {
-  overflow: hidden;
-}
-
-.zoom img {
-  max-width: 100%;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.zoom:hover img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.text-item {
-  position: absolute;
-  left: 5%;
-  right: 5%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #ffffff;
+footer {
   text-align: center;
-  font-weight: 700;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-.Tcarsg {
-  font-family: "Americorps";
-  position: absolute;
-  bottom: 45px;
-  right: 45%;
-}
-
-.Tcarsj {
-  font-family: "Americorps";
-  position: absolute;
-  bottom: 45px;
-  left: 20%;
-}
-
-.TcarsA {
-  font-family: "Americorps";
-  position: absolute;
-  bottom: 45px;
-  right: 27%;
+  padding: 20px;
+  background-color: rgb(75, 75, 75); /* Fundo mais escuro para o rodapé */
+  color: #fff;
 }
